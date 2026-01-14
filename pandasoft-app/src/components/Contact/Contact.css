@@ -1,0 +1,137 @@
+.contact-section {
+  background-color: var(--card-bg);
+}
+
+.contact-info-card {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.contact-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover .contact-icon-wrapper {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.contact-info-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-content {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 500;
+}
+
+.contact-form-wrapper {
+  background-color: var(--bg-color);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background-color: var(--card-bg);
+  border: 2px solid transparent;
+  color: var(--text-color);
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.1);
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.captcha-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 102, 204, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-info-card {
+    margin-bottom: 1.5rem;
+  }
+}

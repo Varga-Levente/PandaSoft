@@ -1,0 +1,60 @@
+.cookie-float-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
+  transition: all 0.3s ease;
+  z-index: 9998;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.cookie-float-button:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 25px rgba(0, 102, 204, 0.6);
+  animation: none;
+}
+
+.cookie-float-button:active {
+  transform: scale(0.95);
+}
+
+/* Bounce animáció */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive - Mobil */
+@media (max-width: 768px) {
+  .cookie-float-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark mode extra glow */
+[data-theme="dark"] .cookie-float-button {
+  box-shadow: 0 4px 20px rgba(0, 204, 153, 0.5);
+}
+
+[data-theme="dark"] .cookie-float-button:hover {
+  box-shadow: 0 6px 30px rgba(0, 204, 153, 0.7);
+}

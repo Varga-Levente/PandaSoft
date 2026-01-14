@@ -1,0 +1,217 @@
+.consultation-booking-section {
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  background-color: var(--bg-color);
+}
+
+.booking-header {
+  margin-top: 2rem;
+}
+
+.booking-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.booking-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.progress-wrapper {
+  margin-bottom: 3rem;
+}
+
+.step-indicators {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.step-indicators::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: var(--card-bg);
+  z-index: 0;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  border: 3px solid var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.step-indicator.active .step-number {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+.step-indicator.completed .step-number {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+
+.step-indicator.completed .step-number::after {
+  content: '✓';
+}
+
+.step-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.6;
+  text-align: center;
+}
+
+.step-indicator.active .step-title {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.custom-progress {
+  height: 8px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.custom-progress .progress-bar {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.booking-form-wrapper {
+  background-color: var(--card-bg);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.step-content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.nav-btn {
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-back {
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-back:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-next,
+.btn-submit {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+}
+
+.btn-next:hover,
+.btn-submit:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+@media (max-width: 768px) {
+  .consultation-booking-section {
+    padding: 100px 0 60px;
+  }
+
+  .booking-title {
+    font-size: 2rem;
+  }
+
+  .booking-subtitle {
+    font-size: 1rem;
+  }
+
+  .booking-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .step-indicators {
+    margin-bottom: 1.5rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .step-title {
+    font-size: 0.75rem;
+  }
+
+  .step-indicators::before {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .form-navigation {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    width: 100%;
+  }
+}

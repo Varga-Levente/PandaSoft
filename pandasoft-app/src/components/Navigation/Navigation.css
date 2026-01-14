@@ -1,0 +1,353 @@
+.custom-navbar {
+  background-color: var(--bg-color);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  box-shadow: none;
+}
+
+.custom-navbar.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-link-item {
+  color: var(--text-color) !important;
+  margin: 0 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link-item:hover {
+  color: var(--primary-color) !important;
+}
+
+.nav-link-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link-item:hover::after {
+  width: 80%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: rotate(20deg) scale(1.1);
+}
+
+.consultation-btn {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.consultation-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+/* Navbar Actions (Téma váltó + Konzultáció gomb) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Téma Váltó Gomb */
+.theme-toggle-btn {
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.1) rotate(15deg);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Styles */
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.mobile-navbar.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.mobile-logo img {
+  height: 35px;
+  width: auto;
+}
+
+.mobile-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .mobile-menu {
+  background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .mobile-menu .offcanvas-body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.mobile-menu .offcanvas-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .mobile-menu .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .mobile-menu .offcanvas-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .mobile-menu .btn-close {
+  filter: invert(1);
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu-item {
+  padding: 1.2rem 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .mobile-menu-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.mobile-menu-item:hover {
+  background-color: var(--card-bg);
+  padding-left: 1.5rem;
+  color: var(--primary-color);
+}
+
+.mobile-menu-bottom {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+[data-theme="dark"] .mobile-menu-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.mobile-theme-toggle span {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .mobile-theme-toggle span {
+  color: #ffffff;
+}
+
+.theme-toggle-btn-large {
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn-large:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn-large svg {
+  font-size: 1.1rem;
+}
+
+/* Mobil Téma Váltó Gomb */
+.mobile-theme-btn {
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-theme-btn:hover,
+.mobile-theme-btn:active {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.02);
+}
+
+.mobile-theme-btn svg {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+  .navbar-logo img,
+  .mobile-logo img {
+    height: 30px;
+  }
+}

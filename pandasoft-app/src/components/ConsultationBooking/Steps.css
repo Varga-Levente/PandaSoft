@@ -1,0 +1,307 @@
+.step-header {
+  text-align: center;
+}
+
+.step-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.form-icon {
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background-color: var(--bg-color);
+  border: 2px solid transparent;
+  color: var(--text-color);
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: var(--bg-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.1);
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Calendar Styles */
+.calendar-wrapper {
+  background-color: var(--bg-color);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fc {
+  font-family: inherit;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border-color: var(--card-bg);
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: var(--card-bg);
+}
+
+.fc .fc-button {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.fc .fc-button-active {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.fc-col-header-cell {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.fc-daygrid-day,
+.fc-timegrid-slot {
+  color: var(--text-color);
+}
+
+.fc-timegrid-slot-label {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.busy-slot {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.available-slot {
+  cursor: pointer;
+}
+
+.available-slot:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.fc-event-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.calendar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.legend-color {
+  width: 30px;
+  height: 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.legend-color.busy {
+  background-color: #ff4444;
+}
+
+.legend-color.available {
+  background-color: #00cc99;
+}
+
+/* Confirmation Step Styles */
+.confirmation-card {
+  background-color: var(--bg-color);
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.confirmation-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+}
+
+.confirmation-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.confirmation-item {
+  background-color: var(--bg-color);
+  border: none;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--card-bg);
+}
+
+.confirmation-item:last-child {
+  border-bottom: none;
+}
+
+.item-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.item-icon {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.item-value {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.message-content {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confirmation-info {
+  background-color: rgba(0, 102, 204, 0.1);
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.confirmation-info p {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Success State */
+.success-animation {
+  margin: 2rem 0;
+  animation: scaleIn 0.5s ease;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: var(--secondary-color);
+}
+
+.success-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 1rem 0;
+}
+
+.success-message {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-heading {
+    font-size: 1.5rem;
+  }
+
+  .calendar-wrapper {
+    padding: 1rem;
+  }
+
+  .calendar-legend {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .confirmation-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .item-value {
+    padding-left: 2rem;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+  }
+
+  .success-title {
+    font-size: 1.5rem;
+  }
+
+  .success-message {
+    font-size: 1rem;
+  }
+}
